@@ -174,3 +174,21 @@ function see_more(action) {
         action.style.display = "";
     }
 }
+
+//function untuk menghapus notifikasi
+function hideElementAfterDelay(element, delay) {
+    setTimeout(function () {
+        element.style.display = "none";
+    }, delay);
+}
+
+// Mencari elemen dengan kelas "container-flash"
+var containerFlashElements = document.querySelectorAll(".container-flash");
+
+// Loop melalui semua elemen "container-flash"
+containerFlashElements.forEach(function (element) {
+    // Periksa apakah elemen ini harus dihapus
+    if (element) {
+        hideElementAfterDelay(element, 5000); // Menghilangkan elemen setelah 5 detik
+    }
+});
